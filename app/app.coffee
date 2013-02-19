@@ -9,6 +9,7 @@ Seq = require('seq')
 Seq().seq(->
   exec "top", (error, stdout, stderr) ->
   	console.log stdout
+    this
 ).catch((err)->
   if err.stack 
     console.log err.stack 
