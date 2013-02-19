@@ -8,8 +8,9 @@ Seq = require('seq')
 
 Seq().seq(->
   exec "top", (error, stdout, stderr) ->
+  	debugger
   	console.log stdout
-    this
+    this()
 ).catch((err)->
   if err.stack 
     console.log err.stack 

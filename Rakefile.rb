@@ -1,17 +1,17 @@
 task :install => [:npm]
-task :deployment => [:install, :stopService, :updateCode, :startService]
 task :default => [:runProgram]
+task :build => [:stopService, :npm, :startService]
 
 task :npm do
-    sh "npm install"
+    sh "echo downfall | sudo -S npm install"
 end
 
 task :stopService do
-    sh "sudo service <<ServiceName>> stop"
+    sh "echo downfall | sudo -S service worker-kue stop"
 end
 
 task :startService do
-    sh "sudo service <<ServiceName>> start"
+    sh "echo downfall | sudo -S service worker-kue start"
 end
 
 task :updateCode do
