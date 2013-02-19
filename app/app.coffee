@@ -6,14 +6,15 @@ START APPLICATION NOW :
 exec = require('child_process').exec
 Seq = require('seq')
 
-Seq().seq(->
+Seq()
+.seq(->
   exec "top", (error, stdout, stderr) ->
-  	debugger
-  	console.log stdout
-    this()
+	debugger
+	console.log stdout
+	this
 ).catch((err)->
   if err.stack 
-    console.log err.stack 
+	console.log err.stack 
   else 
-    console.log err
+	console.log err
 )
