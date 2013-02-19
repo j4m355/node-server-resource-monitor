@@ -7,11 +7,11 @@ task :npm do
 end
 
 task :stopService do
-    sh "echo downfall | sudo -S service worker-kue stop"
+   # sh "echo downfall | sudo -S service worker-kue stop"
 end
 
 task :startService do
-    sh "echo downfall | sudo -S service worker-kue start"
+    #sh "echo downfall | sudo -S service worker-kue start"
 end
 
 task :updateCode do
