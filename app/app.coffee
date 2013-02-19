@@ -7,7 +7,6 @@ exec = require('child_process').exec
 Seq = require('seq')
 
 Seq().seq(->
-  job.progress(1, 7)
   exec "top", (error, stdout, stderr) ->
   	console.log stdout
 ).catch((err)->
@@ -15,4 +14,4 @@ Seq().seq(->
     console.log err.stack 
   else 
     console.log err
-)the 
+)
