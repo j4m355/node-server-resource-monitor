@@ -3,7 +3,7 @@ task :default => [:runProgram]
 task :build => [:stopService, :npm, :startService]
 
 task :npm do
-    sh "echo downfall | sudo -S npm install"
+    sh "npm install"
 end
 
 task :stopService do
