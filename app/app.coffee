@@ -16,7 +16,7 @@ app.get('/top', (req,res) ->
 	debugger	
 	console.log cunt.toString()
 
-	res.send(new Buffer(cunt.toString()))
+	res.send(new Buffer(console.log cunt.toString()))
 	)
 
 app.listen(3000);
