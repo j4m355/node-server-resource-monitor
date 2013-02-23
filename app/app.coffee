@@ -4,18 +4,15 @@ settings = require(__dirname + '/config/config')(__dirname + "/config/settings.j
 START APPLICATION NOW :
 ###
 
-
-exec = require('child_process').exec
-
-
-topProcess = () ->
-	exec "top -b -n 1", (error, stdout, stderr) ->
-		debugger
-		console.log stdout		
+express = require('express')
+app = express()
+TopProcess = require('./functions/TopProcess')
 
 
-topProcess()
-
+	
+app.get('/top' (req,res) ->
+	res.send TopProcess()
+	)
 
 
 
