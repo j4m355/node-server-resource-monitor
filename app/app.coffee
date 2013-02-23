@@ -7,7 +7,7 @@ START APPLICATION NOW :
 
 exec = require('child_process').exec
 
-exec "top", (error, stdout, stderr) ->
+exec "top -b", (error, stdout, stderr) ->
 	debugger
 	console.log stdout
 	console.log stderr
