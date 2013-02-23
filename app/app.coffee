@@ -14,7 +14,7 @@ app.get('/top', (req,res) ->
 	res.set('Content-Type', 'text/html');
 	cunt = TopProcess().stdout
 	debugger	
-	console.log cunt
+	console.log cunt.toString()
 	res.send(new Buffer('cunt'))
 	)
 
