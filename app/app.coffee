@@ -20,7 +20,7 @@ spawnVim = (file, cb) ->
   process.stdin.resume()
   process.stdin.on "data", indata
   top.stdout.on "data", outdata
-  tty.setRawMode true
+  process.stdin.setRawMode true
   top.on "exit", (code) ->
     tty.setRawMode false
     process.stdin.pause()
