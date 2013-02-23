@@ -9,7 +9,7 @@
   "dependencies": {
     "coffee-script": "~1.4.0",
     "nconf": "~0.6.7",
-    "seq": "git+ssh://git@github.com:j4m355/node-seq.git"
+    "express": "3.x"
   },
   "bin": {
     "placeholder": "./bin/placeholder"
