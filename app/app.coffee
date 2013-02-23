@@ -14,6 +14,7 @@ app.get('/top', (req,res) ->
 	cunt = TopProcess()
 	debugger
 	console.log cunt.stdout
+	res.writeHead(200, {'Content-Type': 'text/plain'})
 	res.send JSON.stringify(cunt.stdout)
 	)
 
