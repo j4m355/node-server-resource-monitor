@@ -1,13 +1,12 @@
-##Node App Skeleton
+##Node Process Top
 
-A head start for crap I do manually every time
+Return json for the current running processes on the server - works with ubuntu
+
+Executes 'top' and returns the result as json
 
 ```git clone```
 
 ```npm install```
 
-```delete .git folder and start new repository```
+```node index.js```
 
-```replace "placeholder" in "/bin/" and "package.json" with intended name of app globally```
-
-fart
