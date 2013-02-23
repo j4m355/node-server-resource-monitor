@@ -22,7 +22,7 @@ spawnVim = (file, cb) ->
   top.stdout.on "data", outdata
   process.stdin.setRawMode true
   top.on "exit", (code) ->
-    tty.setRawMode false
+    process.stdin.setRawMode false
     process.stdin.pause()
     process.stdin.removeListener "data", indata
     top.stdout.removeListener "data", outdata
