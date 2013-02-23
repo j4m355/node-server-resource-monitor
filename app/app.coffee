@@ -11,12 +11,12 @@ TopProcess = require('./functions/TopProcess/TopProcess')
 
 	
 app.get('/top', (req,res) ->
-	res.set('Content-Type', 'text/html');
+	#res.set('Content-Type', 'text/html');
 	cunt = TopProcess().stdout
 	debugger	
 	console.log cunt
 
-	res.send(cunt)
+	res.send(new Buffer(cunt))
 	)
 
 app.listen(3000);
