@@ -11,11 +11,11 @@ TopProcess = require('./functions/TopProcess/TopProcess')
 
 	
 app.get('/top', (req,res) ->
-	cunt = TopProcess()
+	cunt = JSON.parse(TopProcess().stdout)
 	debugger
-	console.log cunt.stdout
-	res.writeHead(200, {'Content-Type': 'text/plain'})
-	res.send JSON.stringify(cunt.stdout)
+	console.log cunt
+
+	res.send cunt
 	)
 
 app.listen(3000);
