@@ -25,7 +25,7 @@ spawnVim = (file, cb) ->
     tty.setRawMode false
     process.stdin.pause()
     process.stdin.removeListener "data", indata
-    vim.stdout.removeListener "data", outdata
+    top.stdout.removeListener "data", outdata
     cb code
 
 tty = require("tty")
