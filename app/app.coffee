@@ -14,7 +14,7 @@ app.get('/top', (req,res) ->
 	cunt = TopProcess()
 	debugger
 	console.log cunt.stdout
-	res.send cunt.stdout.toString()
+	res.send cunt.stdout
 	)
 
 app.listen(3000);
