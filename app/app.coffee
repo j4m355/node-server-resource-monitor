@@ -7,7 +7,7 @@ START APPLICATION NOW :
 
 exec = require('child_process').exec
 
-while (1 = 1)
+while 1 == 1
 	exec "top -b -n 1", (error, stdout, stderr) ->
 		debugger
 		console.log stdout
