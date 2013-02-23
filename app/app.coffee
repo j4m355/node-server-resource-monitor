@@ -13,8 +13,8 @@ TopProcess = require('./functions/TopProcess/TopProcess')
 app.get('/top', (req,res) ->
 	cunt = TopProcess()
 	debugger
-	console.log cunt.stdout
-	res.send cunt.stdout
+	console.log cunt
+	res.send cunt
 	)
 
 app.listen(3000);
