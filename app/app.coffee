@@ -12,7 +12,7 @@ TopProcess = require('./functions/TopProcess/TopProcess')
 	
 app.get('/top', (req,res) ->
 	#res.set('Content-Type', 'text/html');
-	cunt = TopProcess().stdout
+	cunt = TopProcess()
 	debugger	
 	console.log cunt
 
