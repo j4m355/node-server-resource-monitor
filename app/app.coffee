@@ -10,7 +10,7 @@ exec = require('child_process').exec
 exec "top -b -n 1", (error, stdout, stderr) ->
 	debugger
 	console.log stdout
-	console.log stderr
+	#console.log stderr
 
 
 
