@@ -12,10 +12,7 @@
     "express": "3.x",
     "jade" : "*"
   },
-  "bin": {
-    "placeholder": "./bin/placeholder"
-    },
-  "repository": "",
+  "repository": "git@github.com:j4m355/node-process-top.git",
   "author": "j4m355",
-  "license": "BSD"
+  "license": "Apache"
 }
