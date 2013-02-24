@@ -27,5 +27,5 @@ Do this shit:
 ```node index.js```
 
 ###Browser
-```http://localhost:3000/``` or ```http://localhost:3000/top```
+```http://localhost:3300/``` or ```http://localhost:3300/top```
 
