@@ -16,7 +16,7 @@ You can also run this tool as a site with a ui by just navigating to the root of
 
 It's useful for me.....maybe for someone else too. Stay off the coke.
 
-#Install
+##Install
 Do this shit:
 ###Terminal
 
