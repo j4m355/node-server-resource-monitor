@@ -5,7 +5,7 @@ This 'tool' allows you to easily keep an eye on the current resource utilisation
 ##What it does
 Executes ```top``` on the linux server and returns the result to any client browser. Useful for keeping an eye on your servers.
 
-![Alt text](/images/screenshot.png "User interface screen shot")
+![Alt text](/app/public/images/screenshot.png "User interface screen shot")
 
 ##Options
 
