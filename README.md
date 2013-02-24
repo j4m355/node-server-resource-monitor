@@ -1,9 +1,9 @@
 #Node Server Resource Monitor
 
-This 'tool' allows you to easily keep an eye on the current resource utilisation on your linux server.
+This 'tool' allows you to easily keep an eye on the current resource utilisation on your Linux or Windows server.
 
 ##What it does
-Executes ```top``` on the linux server and returns the result to any client browser. Useful for keeping an eye on your servers. Looks pretty good on mobiles and tablets too.
+Executes ```top``` or ```tasklist``` (if windows) on the server and returns the result to any client browser. Useful for keeping an eye on your servers. Looks pretty good on mobiles and tablets too.
 
 ![Alt text](/app/public/images/screenshot.png?raw=true "User Interface")
 
