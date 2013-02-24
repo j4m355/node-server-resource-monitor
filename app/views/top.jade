@@ -1,0 +1,139 @@
+!!! 5
+html
+  head
+    title Breathe
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    link(rel='stylesheet', href='css/jquery.mobile-1.0.min.css')
+    link(rel='stylesheet', href='css/lightBlue.css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css') 
+    script(type='text/javascript', src='js/jquery.js')
+    script(type='text/javascript', src='js/jquery.mobile-1.0.min.js')
+    script
+      $(document).ready(function(){
+      new get_fb();
+      });
+      function get_fb(){
+      var feedback = $.ajax({
+      type: "get",
+      url: "/top",
+      async: false
+      }).complete(function(){
+      setTimeout(function(){get_fb();}, 10000);
+      }).responseText;
+      $('#result').html(feedback);
+      }
+  body     
+    div(data-role='page')
+      header(data-role='header')
+        h1 Breathe
+        nav.ui-grid-c
+          .ui-block-a
+            a.navSelected(href='index.html', data-transition='pop') Home
+          .ui-block-b
+            a(href='portfolio.html', data-transition='pop') Portfolio
+          .ui-block-c
+            a(href='blog.html', data-transition='pop') Blog
+          .ui-block-d
+            a(href='contact.html', data-transition='pop') Contact
+        hr.divider
+
+      section#index.wrappedWidth(data-role='content')
+        .section-image
+          img.mainIMG(src='images/refimages/aboutme.jpg', alt='About me')
+          h2 About me
+          .article-wrapper
+            p#result
+              | 
+            p
+              | Ut est odio, ornare at pretium aliquet, posuere vitae dolor.
+              a(href='#') Duis arcu velit
+              | , blandit eget suscipit dapibus, condimentum vel ligula.
+
+        section#latest-news
+          .section-image
+            a(href='blog.html')
+              img.mainIMG(src='images/refimages/04.jpg', alt='Latest News')
+            h2 Latest news
+            .article-wrapper
+              article
+                a(href='blog-single.html')
+                  h4 Our Latest Blog post
+                span.date-info January 23, 2012
+                span.comment-info 3 Comments
+              hr
+              article
+                a(href='blog-single.html')
+                  h4 Another blog post
+                span.date-info December 24, 2011
+                span.comment-info 0 Comments
+              hr
+              article
+                a(href='blog-single.html')
+                  h4 Short one
+                span.date-info September 7, 2011
+                span.comment-info 7 Comments
+        section#latest-projects
+          .section-image
+            .ui-grid-a
+              .ui-block-a.portfolio-featured
+                a(href='portfolio-single.html')
+                  h4 Tree of life
+                  img(src='images/refimages/01.jpg', alt='01')
+              .ui-block-b.portfolio-featured
+                a(href='portfolio-single.html')
+                  h4 Fantasy bridge
+                  img(src='images/refimages/02.jpg', alt='02')
+              .ui-block-a.portfolio-featured
+                a(href='portfolio-single.html')
+                  h4 Photography of grass
+                  img(src='images/refimages/03.jpg', alt='03')
+              .ui-block-b.portfolio-featured
+                a(href='portfolio-single.html')
+                  h4 City at night
+                  img(src='images/refimages/04.jpg', alt='04')
+            .article-wrapper
+              a(href='portfolio.html')
+                h3 Latest projects
+              p
+                | Suspendisse at erat eros. Nunc vel sem sed dui faucibus placerat bibendum ut velit. Morbi porttitor congue nibh in euismod. Curabitur sed urna quis turpis interdum tempor pharetra vehicula lacus. Vestibulum quam nulla, consectetur vitae pharetra ut, congue nec quam.
+
+      footer(data-role='footer', data-theme='a', data-position='inline')
+        hr.divider
+        h4 Follow me on
+        .ui-grid-c.wrappedWidth.shareIcons
+          .ui-block-a
+            a(href='#')
+              img(src='images/lightBlue/fb.png', alt='Facebook')
+          .ui-block-b
+            a(href='#')
+              img(src='images/lightBlue/digg.png', alt='Digg')
+          .ui-block-c
+            a(href='#')
+              img(src='images/lightBlue/twitter.png', alt='Twitter')
+          .ui-block-d
+            a(href='#')
+              img(src='images/lightBlue/rss.png', alt='RSS')
+        h4 Text Widget
+        p
+          | Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+          | Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+          | vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio
+          | a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt
+          | erat scelerisque. Vestibulum ante ipsum
+          a(href='#') primis in faucibus
+          | orci luctus et ultrices posuere
+          | cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam
+          | lorem.
+        nav.ui-grid-c
+          .ui-block-a
+            a.navSelected(href='index.html', data-transition='pop') Home
+          .ui-block-b
+            a(href='portfolio.html', data-transition='pop') Portfolio
+          .ui-block-c
+            a(href='blog.html', data-transition='pop') Blog
+          .ui-block-d
+            a(href='contact.html', data-transition='pop') Contact
+
+
