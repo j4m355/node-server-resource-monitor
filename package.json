@@ -1,7 +1,7 @@
 {
   "name": "node-app-skeleton",
   "version": "0.0.0",
-  "description": "A useful headstart",
+  "description": "Realtime running processes on the server rendered in the browser",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

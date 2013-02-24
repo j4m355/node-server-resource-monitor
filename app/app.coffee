@@ -21,7 +21,7 @@ app.get('/', (req, res)->
 	)
 	
 app.get('/top', (req,res) ->
-	res.set('Content-Type', 'application/json')
+	res.set('Content-Type', 'json')
 	exec "top -b -n 1", (error, stdout, stderr) ->
 		res.send stdout
 	)
