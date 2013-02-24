@@ -23,7 +23,7 @@ app.get('/', (req, res)->
 app.get('/top', (req,res) ->
 	res.set('Content-Type', 'json')
 	if(process.platform =='win32')
-		exec "tasklist", (error, stdout, stderr) ->
+		exec "tasklist -V", (error, stdout, stderr) ->
 			res.send stdout		
 	else
 		exec "top -b -n 1", (error, stdout, stderr) ->
